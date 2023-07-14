@@ -1,16 +1,2 @@
 #!/bin/bash
-
-# Check if the CFILE variable is set
-if [ -z "$CFILE" ]; then
-  echo "CFILE variable is not set."
-  exit 1
-fi
-
-# Define the output file name
-OUTPUT_FILE="c"
-
-# Run the C file through the preprocessor and save the result
-gcc -E -P -std=gnu89 "$CFILE" > "$OUTPUT_FILE"
-
-# Display the tail of the output file
-tail "$OUTPUT_FILE"
+gcc -E -P -o c "$CFILE"
