@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -E -P -o c "$CFILE" 2> /dev/null
+gcc -E $CFILE -o c
