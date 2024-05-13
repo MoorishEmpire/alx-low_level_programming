@@ -8,9 +8,10 @@ void print_to_98(int n)
 {
 	int count;
 	int tmp;
+
 	count = 0;
 	do {
-		if(count < 1)
+		if (count < 1)
 		{
 			printf("%d", n);
 			count++;
@@ -25,7 +26,7 @@ void print_to_98(int n)
 		if (n < 98)
 			printf("%d", ++n);
 		else if (n > 98)
-			printf("%d",--n);
+			printf("%d", --n);
 		if (n != 98)
 		{
 			printf(",");
