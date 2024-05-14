@@ -2,7 +2,9 @@
 
 /**
   * main - Prints the sum of all multiples of 3 or 5 bellow 1024
-  */
+  *
+  *Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int i, count;
