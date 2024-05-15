@@ -1,10 +1,7 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-  * main - Entry point
-  *
-  * Return: Always 0 (Success)
+  * positive_or_negative - Prints the number and the sign of it.
   */
 void positive_or_negative(int i)
 {
@@ -14,6 +11,7 @@ void positive_or_negative(int i)
 		printf("%d is negative", i);
 	else
 		printf("%d is zero", i);
+
 	printf("\n");
 }
 
