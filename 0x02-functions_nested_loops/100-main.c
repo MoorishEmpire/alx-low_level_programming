@@ -1,17 +1,10 @@
 #include "main.h"
 
 /**
-<<<<<<< HEAD
  * main - check the code.
  *
  * Return: Always 0.
  */
-=======
-  * main - check the code.
-  *
-  * Return: Always 0.
-  */
->>>>>>> 7ea658607b8dbcc24cc3adcb9bf39dcc3d711d92
 int main(void)
 {
 	print_times_table(3);
