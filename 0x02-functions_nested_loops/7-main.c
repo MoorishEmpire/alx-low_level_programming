@@ -14,6 +14,10 @@ int main(void)
 	r = print_last_digit(-1024);
 	_putchar('0' + r);
 	_putchar('\n');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7ea658607b8dbcc24cc3adcb9bf39dcc3d711d92
 	return (0);
 }
 
