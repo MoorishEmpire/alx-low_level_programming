@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Function prototype */
 int _isupper(int c);
 int _isdigit(int c);
 int _putchar(char c);
@@ -12,4 +11,4 @@ void print_most_numbers(void);
 void more_numbers(void);
 void print_line(int n);
 
-#endif /* MAIN_H */
+#endif

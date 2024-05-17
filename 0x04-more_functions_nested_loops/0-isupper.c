@@ -8,10 +8,8 @@
  */
 int _isupper(int c)
 {
-/* Check if c is within the ASCII rang of uppercase letters (A-Z) 
- */
-if (c >= 'A' && c <= 'Z')
-return (1);
-else 
-return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
 }
