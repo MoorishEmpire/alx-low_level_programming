@@ -34,8 +34,8 @@ long largest_prime_factor(long n)
 }
 
 /**
-  * main : Checks the code
-  *
+  * main - Prints the largest prime factor of the number returned by the
+  *				function largest_prime_factor
   * Return: Always 0 (Success)
   */
 int main(void)
