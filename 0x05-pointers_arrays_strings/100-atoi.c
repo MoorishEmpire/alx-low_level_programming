@@ -15,7 +15,7 @@ int _atoi(char *s)
 
 	while (*s)
 	{
-		if(*s == '-')
+		if (*s == '-')
 		{
 			if (started)
 				break;
@@ -28,7 +28,7 @@ int _atoi(char *s)
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
-			if ( result > (INT_MAX - (*s - '0')) / 10)
+			if (result > (INT_MAX - (*s - '0')) / 10)
 			{
 				if (sign == 1)
 					return (INT_MAX);
