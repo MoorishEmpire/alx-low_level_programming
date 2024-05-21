@@ -10,7 +10,7 @@ char *cap_string(char *n)
 {
 	int i = 0, j;
 	char separators[] = " \t\n,;.!?\"(){}";
-	
+
 	if (n[i] >= 'a' && n[i] <= 'z')
 		n[i] -= 32;
 
@@ -20,7 +20,7 @@ char *cap_string(char *n)
 		{
 			if (n[i] == separators[j])
 			{
-				if(n[i + 1] >= 'a' && n[i + 1] <= 'z')
+				if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
 				{
 					n[i + 1] -= 32;
 					break;
