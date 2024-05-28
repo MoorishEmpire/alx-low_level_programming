@@ -8,29 +8,43 @@
   */
 int is_palindrome(char *s)
 {
-	int length = 0;
 	int i = 0;
+	int length = _strlen_recursion(s);
 
-	while (s[length] != '\0')
-		length++;
-	return (is_palindrome_helper(s, length, i));
+	if (length == 0)
+		return (1);
+	return (is_palindrome_helper(s, i, length - 1));
 }
 
 /**
   * is_palindrome_helper - Helper function to check if string is palindrome.
   * @s: the string to be checked.
-  * @length: The length of the string.
-  * @i: integer play roll of counter.
+  * @start: starting index.
+  * @end: ending index.
   *
   * Return: 1 if s is palindrome, 0 otherwise.
   */
 
-int is_palindrome_helper(char *s, int length, int i)
+int is_palindrome_helper(char *s, int start, int end)
 {
-	if (i == length / 2)
+	if (start >= end)
 		return (1);
-	if (*(s + i) == *(s + length - 1 - i))
-		return (is_palindrome_helper(s, length, i + 1));
-	else
+	if (s[start] != s[end])
 		return (0);
+
+	return (is_palindrome_helper(s, start + 1, end - 1));
+}
+
+/**
+  * _strlen_recursion - Returns the length of a string.
+  * @s: string
+  *
+  * Return: length of string
+  */
+
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
