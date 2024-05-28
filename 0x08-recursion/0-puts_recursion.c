@@ -6,11 +6,12 @@
  */
 void _puts_recursion(char *s)
 {
-    if (*s == '\0') // Base case: end of the string
-    {
-        _putchar('\n'); // Print a new line when the end of the string is reached
-        return;
-    }
-    _putchar(*s); // Print the current character
-    _puts_recursion(s + 1); // Recursively print the rest of the string
+	if (*s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
+
+	_putchar(*s);
+	_puts_recursion(s + 1);
 }
