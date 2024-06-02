@@ -11,6 +11,7 @@ int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
   * op_sub - Returns the difference of two integers.
   * @a: The first integer.
@@ -18,11 +19,11 @@ int op_add(int a, int b)
   *
   * Return: The difference of a and b.
   */
-
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
   * op_mul - Returns the product of two integers.
   * @a: The first integer.
@@ -30,11 +31,11 @@ int op_sub(int a, int b)
   *
   * Return: The product of a by b.
   */
-
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
+
 /**
   * op_div - Returns the division of two integers.
   * @a: The first integer.
@@ -42,11 +43,11 @@ int op_mul(int a, int b)
   *
   * Return: The division of a by b.
   */
-
 int op_div(int a, int b)
 {
 	return (a / b);
 }
+
 /**
   * op_mod - Returns the module of two integers.
   * @a: The first integer.
