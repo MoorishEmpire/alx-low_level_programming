@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+  * _putnbr - Prints the number n.
+  * @n: The number to print.
+  *
+  * Return: void.
+  */
+
 void	_putnbr(int n)
 {
 	if (n >= 10)
@@ -40,5 +47,5 @@ void print_times_table(int n)
 		}
 	}
 	else
-		return ;
+		return;
 }
