@@ -1,49 +1,44 @@
 #include "main.h"
 
+void	_putnbr(int n)
+{
+	if (n >= 10)
+		_putnbr(n / 10);
+	_putchar(n % 10 + '0');
+}
+
 /**
  * print_times_table - Prints the n times table, starting with 0.
  * @n: The number of the times table to print.
  *
  * Return: void
  */
+
 void print_times_table(int n)
 {
-	int i;
-	int j;
-	int product;
+	int i, j, product;
 
-	if (n > 15 || n < 0)
-		return;
-
-	for (i = 0; i <= n; i++)
+	if (n <= 15 && n >= 0)
 	{
-		for (j = 0; j <= n; j++)
+		for (i = 0; i <= n; i++)
 		{
-			product = i * j;
-
-			if (j != 0)
+			for (j = 0; j <= n; j++)
 			{
-				_putchar(',');
-				_putchar(' ');
-				if (product < 10)
+				product = i * j;
+				if (j != 0)
 				{
+					_putchar(',');
 					_putchar(' ');
-					_putchar(' ');
+					if (product < 100)
+						_putchar(' ');
+					if (product < 10)
+						_putchar(' ');
 				}
-				else if (product < 100)
-				{
-					_putchar(' ');
-					_putchar((product / 10) + '0');
-				}
-				else
-				{
-					_putchar((product / 100) + '0');
-					_putchar(((product / 10) % 10) + '0');
-				}
+				_putnbr(product);
 			}
-			_putchar((product % 10) + '0');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
+	else
+		return ;
 }
-
