@@ -1,23 +1,32 @@
 #include <stdio.h>
 
+/**
+  * main - Generates the password for the crakeme file.
+  * @target: The sum of the ascii of the password target.
+  * @sum: The sum of the ascii password generated.
+  * @i: The index for the array of the stirng generated.
+  * @result: The array of string generated.
+  *
+  * Return: (0 on Success).
+  */
+
 int main() {
-    int target = 2772;    // Target sum
-    int sum = 0;          // To keep track of the current sum
-    int i = 0;            // Index for the result array
-    char result[100];     // Array to store the resulting string
-    
-    // Keep adding characters until the sum equals the target
+    int target = 2772;
+    int sum = 0;
+    int i = 0;
+    char result[100];
+
     while (sum < target) {
-        int next_char = target - sum > 126 ? 126 : target - sum;  // Choose the next character
+        int next_char = target - sum > 126 ? 126 : target - sum;
         
-        result[i++] = next_char;   // Add the character to the result array
-        sum += next_char;          // Update the current sum
+        result[i++] = next_char;
+        sum += next_char;
     }
     
-    result[i] = '\0';   // Null-terminate the result string
+    result[i] = '\0';
     
     printf("%s", result);
     
-    return 0;
+    return (0);
 }
 
