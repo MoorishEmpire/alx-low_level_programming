@@ -38,7 +38,7 @@ int _atoi(char *s)
 					return (INT_MIN);
 				if (number > (unsigned int)INT_MAX / 10
 						&& signe == 1)
-					 return (INT_MAX);
+					return (INT_MAX);
 
 				number *= 10;
 				number += s[i] - 48;
