@@ -1,14 +1,6 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdlib.h>
 
-/**
-  * _strstr - Locates a substring.
-  * @haystack: The string to be scanned.
-  * @needle: The substring to look for the occurrence.
-  *
-  * Return: Pointer to the beginning of the located substring, or NULL if the
-  *					substring is not found.
-  */
 char	*_strstr(char *haystack, char *needle)
 {
 	int i;
@@ -32,4 +24,3 @@ char	*_strstr(char *haystack, char *needle)
 	}
 	return (NULL);
 }
-
