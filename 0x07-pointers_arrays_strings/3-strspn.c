@@ -8,32 +8,30 @@
   * Return: The number of characters in the initial segment of s which consist
   *					only of characters from accept.
   */
-unsigned int _strspn(char *s, char *accept)
+unsigned int	_strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
-	int i, j;
-	int found;
+	int	i;
+	int	j;
+	int	found;
 
-	for (i = 0; s[i] != '\0'; i++)
+	j = 0;
+	while (s[j])
 	{
 		found = 0;
-
-		for (j = 0; accept[j] != '\0'; j++)
+		i = 0;
+		while (accept[i])
 		{
-			if (s[i] == accept[j])
+			if (accept[i] == s[j])
 			{
 				found = 1;
 				break;
 			}
+			i++;
 		}
-		if (found)
-		{
-			count++;
-		}
-		else
-		{
+		if (!found)
 			break;
-		}
+		j++;
 	}
-	return (count);
+	return (j);
 }
+
