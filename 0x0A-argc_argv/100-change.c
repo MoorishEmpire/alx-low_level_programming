@@ -59,7 +59,10 @@ int	main(int argc, char *argv[])
 	{
 		cents = atoi(argv[1]);
 		if (cents <= 0)
+		{
 			printf("0\n");
+			return (0);
+		}
 
 		counts = nb_cents(cents);
 		printf("%d\n", counts);
