@@ -24,7 +24,7 @@ int	_strlen(char *s, int len)
   */
 int	is_palindrome_helper(char *s, char *p1, char *p2)
 {
-	if (p1 > p2)
+	if (p1 >= p2)
 		return (1);
 	if (*p1 != *p2)
 		return (0);
