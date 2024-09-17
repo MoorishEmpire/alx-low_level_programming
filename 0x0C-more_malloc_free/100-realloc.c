@@ -11,46 +11,45 @@
   *
   * Return: Pointer to the new allocated space or NULL if it fails.
   */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void	*_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *realloc, *P1;
-	unsigned int i;
-	void *maloc;
+	char	*new;
+	unsigned int	i;
+	unsigned int	size;
 
-	P1 = ptr;
-	if (ptr == NULL && new_size != 0)
+	if (ptr == NULL)
 	{
-		ptr = malloc(new_size);
-		return (ptr);
+		new = malloc(new_size);
+		if (new == NULL)
+			return (NULL);
+		return ((void *)new);
 	}
-	if (new_size == 0 && ptr != NULL)
+
+	if (new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	if (new_size > old_size)
+
+	if (new_size == old_size)
 	{
-		maloc = malloc(new_size);
-		if (maloc == NULL)
-			return (NULL);
-		realloc = maloc;
-		for (i = 0; i < old_size; i++)
-			realloc[i] = P1[i];
-		free(ptr);
-		return (maloc);
-	}
-	else if (new_size == old_size)
 		return (ptr);
-	else if (new_size < old_size)
-	{
-		maloc = malloc(new_size);
-		if (maloc == NULL)
-			return (NULL);
-		realloc = maloc;
-		for (i = 0; i < new_size; i++)
-			realloc[i] = P1[i];
-		free(ptr);
-		return (maloc);
 	}
-	return (ptr);
+
+	size = (new_size < old_size) ? new_size : old_size;
+
+	new = malloc(new_size);
+	if (new == NULL)
+		return (NULL);
+
+	i = 0;
+	while (i < size)
+	{
+		new[i] = ((char *)ptr)[i];
+		i++;
+	}
+
+	free(ptr);
+	return ((void *)new);
 }
+
