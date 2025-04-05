@@ -5,7 +5,7 @@
  * @n: The unsigned long int.
  * @index: The index of the bit we want to set.
  *
- * Retutn: 1 on success or -1 if an error occurred.
+ * Return: 1 on success or -1 if an error occurred.
  */
 
 int	clear_bit(unsigned long int *n, unsigned int index)
