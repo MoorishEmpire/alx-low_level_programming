@@ -10,13 +10,13 @@ void	print_binary(unsigned long int n)
 	int	i;
 
 	leading = 0;
-	i = 31;
+	i = (sizeof(unsigned long int) * 8) - 1;
 	while (i >= 0)
 	{
-		if ((n & (1U << i)) != 0)
+		if ((n & (1UL << i)) != 0)
 			leading = 1;
 		if (leading)
-			_putchar((n & (1U << i)) ? '1' : '0');
+			_putchar((n & (1UL << i)) ? '1' : '0');
 		i--;
 	}
 	if (!leading)
