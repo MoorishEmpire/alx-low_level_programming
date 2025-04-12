@@ -9,7 +9,7 @@ int	get_endianness(void)
 {
 	int		i;
 	uint32_t	x = 0xa1b2c3d4;
-	uint8_t*	c = (uint8_t *)&x;
+	uint8_t		*c = (uint8_t *)&x;
 
 	i = sizeof(unsigned long int) * 8 - 1;
 	while (i >= 4)
